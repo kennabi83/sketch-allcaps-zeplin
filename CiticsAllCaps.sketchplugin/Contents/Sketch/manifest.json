@@ -1,0 +1,31 @@
+{
+  "name": "Citics · ALLCAPS",
+  "identifier": "vn.citics.allcaps",
+  "version": "1.1.0",
+  "description": "Bake real uppercase before syncing to Zeplin, select the baked artboards, then restore the original casing. Zeplin carries no text-transform field, so the casing has to live in the string.",
+  "author": "Citics Design",
+  "compatibleVersion": "3.0",
+  "bundleVersion": 1,
+  "commands": [
+    { "name": "Count — current page", "identifier": "countPage", "script": "allcaps.js", "handler": "onCountPage" },
+    { "name": "Count — whole file", "identifier": "countDoc", "script": "allcaps.js", "handler": "onCountDoc" },
+    { "name": "Bake — current page", "identifier": "bakePage", "script": "allcaps.js", "handler": "onBakePage" },
+    { "name": "Bake — whole file", "identifier": "bakeDoc", "script": "allcaps.js", "handler": "onBakeDoc" },
+    { "name": "Select baked artboards — this page", "identifier": "selectBaked", "script": "allcaps.js", "handler": "onSelectBaked", "shortcut": "ctrl shift a" },
+    { "name": "Select baked artboards — next page", "identifier": "selectBakedNext", "script": "allcaps.js", "handler": "onSelectBakedNext", "shortcut": "ctrl shift n" },
+    { "name": "Restore — current page", "identifier": "restorePage", "script": "allcaps.js", "handler": "onRestorePage" },
+    { "name": "Restore — whole file", "identifier": "restoreDoc", "script": "allcaps.js", "handler": "onRestoreDoc" }
+  ],
+  "menu": {
+    "title": "Citics · ALLCAPS",
+    "items": [
+      "countPage", "countDoc",
+      "-",
+      "bakePage", "bakeDoc",
+      "-",
+      "selectBaked", "selectBakedNext",
+      "-",
+      "restorePage", "restoreDoc"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+.DS_Store
+*.sketch
+*.sketchcloud
+node_modules/
